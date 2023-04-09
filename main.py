@@ -10,7 +10,7 @@ WHITE = (255, 255, 255)
 WILL_DIE = (100, 100, 100)
 
 # Game variables
-SIZE = 20
+SIZE = 5
 T = 0.001
 SHOW_WILL_DIE = False
 
@@ -83,7 +83,7 @@ def main(t=T):
                 if event.key == pygame.K_r:
                     cells = np.zeros((int(HEIGHT / SIZE), int(WIDTH / SIZE)))
                 if event.key == pygame.K_ASTERISK:
-                    for i in range(1500):
+                    for i in range(int((1/(50*SIZE)) * (WIDTH * HEIGHT))):
                         y = random.randint(0, len(cells) - 1)
                         x = random.randint(0, len(cells[0]) - 1)
 
